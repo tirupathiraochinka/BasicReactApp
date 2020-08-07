@@ -5,8 +5,12 @@ const path=require('path')
 const PORT=8000;
 
 
+// app.get('/',(req,res)=>{
+//     res.send(express.static(path.join(__dirname,'client','build')));
+// })
+
 app.get('/',(req,res)=>{
-    res.send(express.static(path.join(__dirname,'client','build')));
+    res.send("This is server call");
 })
 
 app.use(express.static(path.join(__dirname,'client','build')))
